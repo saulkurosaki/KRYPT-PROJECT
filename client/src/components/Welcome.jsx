@@ -89,6 +89,12 @@ const Welcome = () => {
               type="text"
               handleChange={() => {}}
             />
+            <Input
+              placeholder="Enter Message"
+              name="message"
+              type="text"
+              handleChange={() => {}}
+            />
           </div>
         </div>
       </div>
