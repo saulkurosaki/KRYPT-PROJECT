@@ -77,6 +77,12 @@ const Welcome = () => {
               type="text"
               handleChange={() => {}}
             />
+            <Input
+              placeholder="Amount (ETH)"
+              name="amount"
+              type="number"
+              handleChange={() => {}}
+            />
           </div>
         </div>
       </div>
