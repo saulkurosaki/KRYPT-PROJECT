@@ -87,24 +87,24 @@ export const TransactionProvider = ({ children }) => {
     }
   };
 
-  //   const checkIfTransactionsExists = async () => {
-  //     try {
-  //       if (ethereum) {
-  //         const transactionsContract = createEthereumContract();
-  //         const currentTransactionCount =
-  //           await transactionsContract.getTransactionCount();
+  const checkIfTransactionsExists = async () => {
+    try {
+      if (ethereum) {
+        const transactionsContract = createEthereumContract();
+        const currentTransactionCount =
+          await transactionsContract.getTransactionCount();
 
-  //         window.localStorage.setItem(
-  //           "transactionCount",
-  //           currentTransactionCount
-  //         );
-  //       }
-  //     } catch (error) {
-  //       console.log(error);
+        window.localStorage.setItem(
+          "transactionCount",
+          currentTransactionCount
+        );
+      }
+    } catch (error) {
+      console.log(error);
 
-  //       throw new Error("No ethereum object");
-  //     }
-  //   };
+      throw new Error("No ethereum object");
+    }
+  };
 
   //   const connectWallet = async () => {
   //     try {
