@@ -87,7 +87,7 @@ export const TransactionProvider = ({ children }) => {
     }
   };
 
-  const checkIfTransactionsExists = async () => {
+  const checkIfTransactionsExist = async () => {
     try {
       if (ethereum) {
         const transactionsContract = createEthereumContract();
@@ -170,25 +170,23 @@ export const TransactionProvider = ({ children }) => {
     }
   };
 
-  //   useEffect(() => {
-  //     checkIfWalletIsConnected();
-  //     checkIfTransactionsExists();
-  //   }, [transactionCount]);
+  useEffect(() => {
+    checkIfWalletIsConnected();
+    checkIfTransactionsExist();
+  }, [transactionCount]);
 
   return (
     <TransactionContext.Provider
-      value={
-        {
-          // transactionCount,
-          // connectWallet,
-          // transactions,
-          // currentAccount,
-          // isLoading,
-          // sendTransaction,
-          // handleChange,
-          // formData,
-        }
-      }
+      value={{
+        transactionCount,
+        connectWallet,
+        transactions,
+        currentAccount,
+        isLoading,
+        sendTransaction,
+        handleChange,
+        formData,
+      }}
     >
       {children}
     </TransactionContext.Provider>
