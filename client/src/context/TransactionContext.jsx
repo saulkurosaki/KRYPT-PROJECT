@@ -62,7 +62,7 @@ export const TransactionProvider = ({ children }) => {
 
         setTransactions(structuredTransactions);
       } else {
-        console.log("Ethereum is not present");
+        console.log("Please install Metamask");
       }
     } catch (error) {
       console.log(error);
